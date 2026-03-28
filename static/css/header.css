@@ -1,0 +1,199 @@
+
+:root{
+  --header-top: 1rem;
+  --header-max-height: 7rem;
+  --header-height: 5rem;
+
+  --header-font-size: 2rem;
+
+  --desktop-header-width: 95%;
+  --desktop-header-columns: 15% 85%;
+  --desktop-header-img-width: 4rem;
+  --desktop-header-img-left: 1rem;
+
+  --desktop-header-nav-gap: 2rem;
+
+  --mobile-header-columns: 20% 80%;
+  --mobile-header-img-width: 4rem;
+  --mobile-header-img-left: 1rem;
+
+  --modal-header-font-size: 3rem;
+  --modal-header-nav-top: 2rem;
+  --modal-header-nav-gap: 2rem;
+  --modal-header-exit-svg-margin: 1rem 0rem 0rem 1rem;
+}
+
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+  height: var(--header-height);
+  width: 100%;
+  margin-top: var(--header-top);
+  position: fixed;
+}
+
+/* Styles for modal window: */
+header > .header-modal {
+  display: none;
+  position: fixed;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--background-light);
+  top: var(--header-top);
+  right: 0;
+  width: 50vw;
+  height: 50vh;
+  border: 1px solid transparent;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  box-shadow: 11px 11px 11px 4px rgba(0, 0, 0, 0.57);
+}
+
+header > .header-modal > .exit-class {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+header > .header-modal > nav {
+  margin-top: var(--modal-header-nav-top);
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--modal-header-nav-gap);
+}
+
+header > .header-modal > nav > a {
+  text-decoration: none;
+  color: var(--font-base-color);
+  font-size: var(--modal-header-font-size);
+}
+
+header > .header-modal > .exit-class > svg {
+  margin: var(--modal-header-exit-svg-margin);
+}
+
+/* Cleaning up mobile header on desktop:*/
+header > .mobile-header {
+  width: 95%;
+  display: none;
+  grid-template-columns: var(--mobile-header-columns); 
+  grid-template-rows: repeat(1, 1fr);
+  align-items: center;
+  background-color: var(--background-lighter);
+  border: 1px solid transparent;
+  border-radius: 10px;
+  box-shadow: 0px 12px 11px 4px rgba(0, 0, 0, 0.57);
+}
+
+header > .mobile-header > img {
+  display: flex;
+  justify-self: start;
+  width: var(--mobile-header-img-width);
+  height: auto;
+  margin-left: var(--mobile-header-img-left);
+  border: 1px solid transparent;
+  border-radius: 6px;
+}
+
+header > .mobile-header > svg {
+  display: flex;
+  justify-self: end;
+  margin-right: 1rem;
+}
+
+header > .desktop-header {
+  width: var(--desktop-header-width);
+  display: grid;
+  grid-template-columns: var(--desktop-header-columns);
+  align-items: center;
+  background-color: var(--background-lighter);
+  height: var(--header-height);
+  border: 1px solid transparent;
+  border-radius: 10px;
+  box-shadow: 0px 12px 11px 4px rgba(0, 0, 0, 0.57);
+}
+
+header > .desktop-header > img {
+  display: flex;
+  justify-self: start;
+  width: var(--desktop-header-img-width);
+  height: auto;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  margin-left: var(--desktop-header-img-left);
+
+}
+
+header > .desktop-header > nav {
+  display: flex;
+  flex-direction: row;
+  gap: var(--desktop-header-nav-gap);
+  justify-self: center;
+}
+
+header > .desktop-header > nav > a {
+  text-decoration: none;
+  color: var(--font-base-color);
+  font-size: var(--header-font-size);
+  transition: 0.3s ease;
+}
+
+
+@media(hover:hover){
+
+  header > .desktop-header > nav > a:hover {
+    color: #bdbdbd;
+  }
+}
+
+
+@media(max-width: 768px) {
+
+  header > .desktop-header {
+    display: none;
+  }
+
+  header > .mobile-header {
+    display: grid;
+  }
+}
+
+@media(min-width: 1920px) and (max-width: 2559px){  
+  :root{
+    --header-height: 6rem;
+    --header-font-size: 2rem;
+    --desktop-header-img-width: 5rem;
+  }
+}
+
+
+@media(min-width: 2560px) and (max-width: 3099px){  
+  :root{
+    --header-height: 7rem;
+    --header-font-size: 3rem;
+    --desktop-header-img-width: 6rem;
+  }
+}
+
+
+@media(min-width: 3100px) and (max-width: 3599px){  
+  :root{
+    --header-height: 8rem;
+    --header-font-size: 4rem;
+    --desktop-header-img-width: 7rem;
+  }
+}
+
+@media(min-width: 3600px) {
+  :root{
+    --header-height: 9rem;
+    --header-font-size: 5rem;
+    --desktop-header-img-width: 8rem;
+  }
+  
+}

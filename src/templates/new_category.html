@@ -1,0 +1,63 @@
+<link rel="stylesheet" href="/static/css/categories.css">
+<section id="add-category">
+    <h1>Добавить категорию</h1> 
+    <span>Чтобы добавить категорию, заполните форму:</span>
+    <form id="add-category-form">
+      <label for="category-name">Название категории:</label>
+      <input type="text" name="category-name" id="category-name"> 
+      <label for="parent-id">Родительская категория:</label>
+      <select id="parent-id">
+         
+      </select>
+      <button type="submit">Добавить</button>
+    </form>
+</section>
+<section id="categories">
+   
+  <h1>Все категории:</h1> 
+  <div class="search-categories">
+     
+  </div>
+
+  <div class="all-categories">
+    <div class="cards-categories">
+
+    </div> 
+   
+    <div class="pagination-btns">
+      <svg width="24" height="24" viewBox="0 0 24 24" id="back-btn">
+        <use href="/static/icons/sprite.svg#back-logo"></use>
+      </svg>
+
+      <svg width="24" height="24" viewBox="0 0 24 24" id="next-btn">
+        <use href="/static/icons/sprite.svg#next-logo"></use>
+      </svg>
+    </div>
+
+  </div>
+</section>
+
+<div class="modal-result">
+  
+</div>
+
+<div class="modal-redact">
+  <div class="exit-class">
+    <svg width="30" height="30" viewBox="0 0 41 41" id="exit-btn"> 
+      <use href="/static/icons/sprite.svg#exit-logo"></use>
+    </svg>
+  </div>
+  <h1>Внесите изменения в форму</h1>
+  <form>
+      <label for="redact-category-name">Название категории:</label>
+      <input type="text" name="redact-category-name" id="redact-category-name"> 
+      <label for="redact-parent-id">Родительская категория:</label>
+      <select id="redact-parent-id">
+         
+      </select>
+      <input type="hidden" id="redact-category-id">
+      <button type="submit" id="redact-btn">Добавить</button>
+  </form> 
+</div>
+
+ <script defer type="module" src="/static/js/categories/main.js"></script>

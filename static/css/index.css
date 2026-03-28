@@ -1,0 +1,199 @@
+:root{
+  --main-margin-top: 10rem;
+
+/* Basic colors: */
+  --background-site: #333333;
+  --background-lighter: #595959;
+  --background-light: #4A4B55;
+  --accent-color: #9966CC;
+
+  --font-base-color: #ffffff;
+
+  /* Font-sizes: */
+  --h1-font-size: 2rem;
+  --span-base-font-size: 1.6rem;
+  --span-large-font-size: 2rem;
+  --label-base-font-size: 1.6rem;
+  --base-input-font-size: 2rem;
+
+  /* sizes: */
+  --sections-width: 90%;
+  --add-data-form-width: 90%;
+  --add-data-input-width: 80%;
+
+  /* margins: */
+  --base-section-margin: 6rem;
+  --base-sections-padding: 1rem 0rem 1rem 0rem;
+  --form-data-btn-padding: 0.5rem 1rem 0.5rem 1rem;
+  --all-side-padding: 1rem;
+}
+
+
+*{
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+@font-face {
+  font-family: "Ubuntu";
+  src: url(/static/fonts/Ubuntu/Ubuntu-Regular.ttf);
+  font-weight: 400;
+}
+
+
+@font-face {
+  font-family: "Ubuntu";
+  src: url(/static/fonts/Ubuntu/Ubuntu-Bold.ttf);
+  font-weight: 700;
+}
+
+
+html, body {
+  width: 100%;
+  height: 100%;
+  background-color: var(--background-site); 
+  font-family: "Ubuntu";
+  font-weight: 400;
+}
+
+html {
+  font-size: 10px;
+}
+
+body{
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(1, 1fr);
+  justify-items: center;
+}
+
+main {
+  background-color: var(--background-site);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  gap: var(--base-section-margin);
+  margin-top: var(--main-margin-top);
+}
+
+/* Styles for notifications: */
+.modal-result {
+  z-index: 1002;
+  position: fixed;
+  top: 3rem;
+  border: 1px solid transparent;
+  display: flex;
+  padding: var(--all-side-padding);
+  border: 1px solid transparent;
+  border-radius: 5px;
+}
+
+.modal-result > p {
+  font-size: var(--span-large-font-size);
+  color: #ffffff;
+}
+
+.error-result {
+  background-color: rgba(255, 24, 43, 1);
+}
+
+.success-result {
+  background-color: rgba(80, 200, 120, 1);
+}
+
+
+@media(min-width: 768px) and (max-width: 1023px){
+  
+  :root{
+    --sections-width: 80%;
+    --add-data-form-width: 80%;
+    --add-data-input-width: 70%;
+  }
+
+}
+
+
+@media(min-width: 1024px) and (max-width: 1439px){
+  
+  :root{
+    --sections-width: 70%;
+    --add-data-form-width: 70%;
+    --add-data-input-width: 60%;
+  }
+
+}
+
+@media (min-width: 1440px) {
+  :root{
+    --sections-width: 60%;
+    --add-data-form-width: 60%;
+    --add-data-input-width: 50%;
+  }
+}
+
+
+@media (min-width: 1440px) and (max-width: 1919px) {
+
+  :root{
+    --h1-font-size: 2.5rem;
+    --span-base-font-size: 2.1rem;
+
+    --label-base-font-size: 2rem;
+    --base-input-font-size: 2.5rem;
+
+  }
+}
+
+
+@media (min-width: 1920px) and (max-width: 2559px) {
+  :root{
+    --main-margin-top: 12rem;
+    --h1-font-size: 3rem;
+    --span-base-font-size: 2.8rem;
+    --base-sections-padding: 1.5rem 0rem 1.5rem 0rem;
+    --form-data-btn-padding: 0.8rem 1.5rem 0.8rem 1.5rem;
+    --all-side-padding: 1.5rem;
+
+
+    --label-base-font-size: 2.5rem;
+    --base-input-font-size: 2.5rem;
+
+  }
+}
+
+
+@media (min-width: 2560px) and (max-width: 3099px) {
+  :root{
+    --main-margin-top: 13rem;
+    --h1-font-size: 4.5rem;
+    --span-base-font-size: 4.1rem;
+
+    --label-base-font-size: 3rem;
+    --base-input-font-size: 3rem;
+
+  }
+}
+
+
+@media (min-width: 3100px) and (max-width: 3599px) {
+  :root{
+    --main-margin-top: 14rem;
+    --h1-font-size: 5.5rem;
+    --span-base-font-size: 5.1rem;
+    --base-sections-padding: 2rem 0rem 2rem 0rem;
+    --form-data-btn-padding: 1.2rem 2rem 1.2rem 2rem;
+    --all-side-padding: 2rem;
+  }
+}
+
+
+@media (min-width: 3600px) {
+  :root{
+    --main-margin-top: 15rem;
+    --h1-font-size: 6rem;
+    --span-base-font-size: 6.1rem;
+  }
+}

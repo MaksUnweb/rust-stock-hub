@@ -1,0 +1,62 @@
+<link rel="stylesheet"  href="/static/css/base_main.css">
+<section id="hello-section">
+  <h1>Добро пожаловать!</h1> 
+</section>
+
+<section id="search-section">
+    <form id="search-form">
+  <label for="search-input">Для поиска товара введите его артикул:</label> 
+     <input type="text" id="search-input" placeholder="F-1123"> 
+    </form> 
+    <div class="search-preview">
+      
+    </div>
+</section>
+
+<section id="statistical-data">
+  <div class="past-products">
+    <h1>Последние продукты:</h1> 
+    <div class="past-products-cards">
+      
+    </div>      
+  </div> 
+  <div class="past-category">
+    <h1>Последние категории:</h1> 
+    <div class="past-categories-cards">
+      
+    </div>
+  </div>
+</section>
+<div class="modal-result">
+  
+</div>
+
+<div class="modal-redact">
+  <div class="exit-class">
+    <svg width="30" height="30" viewBox="0 0 41 41" id="exit-btn"> 
+      <use href="/static/icons/sprite.svg#exit-logo"></use>
+    </svg>
+  </div>
+  <h1>Внесите изменения в форму</h1>
+  <form>
+    <label for="article-number">Артикул:</label>
+    <input type="text" name="article-number" id="redact-article-number" placeholder="F-31324"> 
+    <label for="title-product">Название:</label>
+    <input type="text" name="title-product" id="redact-title-product" placeholder="Какое-то название">
+    <label for="category">Категория:</label>
+    <select name="category" id="redact-category">
+       
+    </select>
+    <label for="quantity-product">Количество:</label>
+    <input type="number" name="quantity-product" id="redact-quantity-product" min="1">
+    <label for="price-product">Цена за штуку:</label>
+    <input type="number" name="price-product" id="redact-price-product" min="1">
+    <input type="hidden" value="" id="product-id">
+    <button type="submit" id="redact-btn">Изменить</button>
+  </form> 
+</div>
+
+<script defer type="module" src="/static/js/base_main/base_main.js"></script>
+<script defer type="module" src="/static/js/fetch_get.js"></script>
+<script defer type="module" src="/static/js/notification_modal.js"></script>
+<script defer type="module" src="/static/js/base_main/search.js"></script>

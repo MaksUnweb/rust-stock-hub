@@ -1,0 +1,84 @@
+:root {
+  --section-login-gap: 3rem;
+  --section-login-h1-font-size: 3rem;
+
+
+  --form-gap: 1rem;
+  --form-width: 40%;
+  --form-height: 60%;
+  --form-label-font-size: 2rem;
+  --form-input-height: 2.5rem;
+
+  --form-button-top: 3rem;
+  --form-button-padding: 0.7rem 2.5rem 0.7rem 2.5rem;
+
+}
+
+body, html {
+  display: flex;
+  align-items: center;
+}
+main {
+ align-items: center; 
+ justify-content: center;
+ width: 100%;
+ height: 100%;
+}
+
+#section-login {
+  width: 90%;
+  height: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: var(--section-login-gap);
+  background-color: var(--background-lighter); 
+  border: 4px solid #8f8ea4;
+  border-radius: 30px;
+}
+
+#section-login > h1 {
+  color: var(--font-base-color);
+  font-size: var(--section-login-h1-font-size);
+}
+
+#section-login > form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--form-gap);
+  width: var(--form-width);
+  height: var(--form-height);
+  background-color: var(--background-site);
+  border: 1px solid transparent;
+  border-radius: 15px;
+}
+
+#section-login > form > label {
+  font-size: var(--form-label-font-size);
+  font-weight: 700;
+  color: var(--font-base-color);
+}
+
+#section-login > form > input {
+  height: var(--form-input-height);
+}
+
+#section-login > form > button {
+  margin-top: var(--form-button-top);
+  border: 1px solid transparent;
+  border-radius: 5px;
+  background-color: #8f8ea4;
+  font-size: 2rem;
+  padding: var(--form-button-padding);
+  font-weight: 800;
+  color: var(--background-site);
+}
+
+@media(max-width: 1000px) {
+  :root{
+    --form-width: 80%;
+  }
+}
