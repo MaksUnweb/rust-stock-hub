@@ -54,3 +54,4 @@ This is necessary for Docker to create the database with the specified credentia
 Next, locate the database connection pool creation in `/src/includes/start_web.rs` and specify the exact database connection details.
 
 After this, run docker compose up -d with the standard command to pull and build the database image. Then, compile the project using `cargo build --release`. The executable file will be located at `target/release/project_name`.
+You also need to add authentication data to the migration files before compiling the project. Currently, the same data with the login - Admin and password 1111 is installed there in a cached format. The Argon2 crate was used for hashing, but perhaps soon I will make a CLI utility for hashing data.
