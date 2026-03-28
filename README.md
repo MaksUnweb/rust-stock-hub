@@ -32,10 +32,10 @@ The backend is written in the Rust programming language, using key dependencies 
 The frontend is built using standard technologies: HTML, CSS, JS.
 Next, I would like to provide some screenshots of the interface:
 
-!(./screenshots/login.png)
-!(./screenshots/base_main.png)
-!(./screenshots/products.png)
-!(./screenshots/redact.png)
+![Login screen](./screenshots/login.png)
+![Main screen](./screenshots/base_main.png)
+![Products screen](./screenshots/products.png)
+![Edit screen](./screenshots/redact.png)
 
 ## How to use?
 
